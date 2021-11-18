@@ -1,8 +1,6 @@
 <!DOCTYPE html>
+
 <html>
-
-    
-
     <head>
         <title>Groenten Gerard</title>
         <link rel="stylesheet" type="text/css" href="css\style.css" />
@@ -20,61 +18,31 @@
         });
     </script>
 
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $("button").click(function(){
-            $("#output").load("https://raw.githubusercontent.com/Perry01/GIP/main/test.html");
-            $('#content').hide();
-        });
-    });
-    </script>
-
 <body>
-
-<div class=flexbox-container>
-
-    <section class="header">
-       
+    <div class=flexbox-container>
+    
+        <section class="header">
+           
+            
+            <h1>Groentenboer Gerard</h1>
+            <p class=quote>"Recht uit de grond, een plezier voor uw mond"</p>
+            
+            
+        </section>
+    
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aanbod.html">Aanbod</a></li>
+            <li><a href="klanten.html">Klanten</a></li>
+            <li style="float:right"><a href="login.html">Login</a></li>
+        </ul>
+    
+    
+        <div class="flexbox-content">
         
-        <h1>Groentenboer Gerard</h1>
-        <p class=quote>"Recht uit de grond, een plezier voor uw mond"</p>
-        
-        
-    </section>
+            <h3>Koop hier je bloemkool.</h3>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aanbod.html">Aanbod</a></li>
-        <li><a href="klanten.html">Klanten</a></li>
-        <li style="float:right"><a href="login.html">Login</a></li>
-    </ul>
-
-
-    <div class="flexbox-content">
-
-        
-        <header>
-            <button type="button">Test</button>
-          </header>
-          
-          <div id="output">
-              <h2>Klik op de knop test</h2>
-          </div>
-        
-
-
-
-    <div  id="content" class=flexbox-paragraph>
-        <div class=titelp>
-            <h1>Welkom.</h1>
-    </div>
-        <div class=paragraph-text>
-            <p> Dag beste klant, welkom op mijn website, ik ben boer Gerard en ik hou van groentjes!<br>
-            Al meer dan 20 jaar sta ik zowel op het veld als op de markt, paraat om u de beste groenten aan te bieden.<br></p>
-            <img src="Afbeeldingen\Gerard.jpg" alt="Mijn veld" style="max-width: 100%;" style="height: auto;">
         </div>
-    </div>
-    </div>
     </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Naar boven</button>
