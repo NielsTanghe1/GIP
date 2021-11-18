@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+    
+
+    <head>
+        <title>Groenten Gerard</title>
+        <link rel="stylesheet" type="text/css" href="css\style.css" />
+        <link rel="stylesheet" type="text/css" href="css\header.css" />
+        <link rel="stylesheet" type="text/css" href="css\scrollbutton.css" />
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(function(){
+            $('a').each(function(){
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active'); $(this).parents('li').addClass('active');
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#output").load("https://raw.githubusercontent.com/Perry01/GIP/main/test.html");
+        });
+    });
+    </script>
+
+<body>
+
+<div class=flexbox-container>
+
+    <section class="header">
+       
+        
+        <h1>Groentenboer Gerard</h1>
+        <p class=quote>"Recht uit de grond, een plezier voor uw mond"</p>
+        
+        
+    </section>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aanbod.html">Aanbod</a></li>
+        <li><a href="klanten.html">Klanten</a></li>
+        <li style="float:right"><a href="login.html">Login</a></li>
+    </ul>
+
+
+    <div class="flexbox-content">
+
+        
+        <header>
+            <button type="button">Test</button>
+          </header>
+          
+          <div id="output">
+              <h2>ok</h2>
+          </div>
+        
+
+
+
+    <div class=flexbox-paragraph>
+        <div class=titelp>
+            <h1>Welkom.</h1>
+    </div>
+        <div class=paragraph-text>
+            <p> Dag beste klant, welkom op mijn website, ik ben boer Gerard en ik hou van groentjes!<br>
+            Al meer dan 20 jaar sta ik zowel op het veld als op de markt, paraat om u de beste groenten aan te bieden.<br></p>
+            <img src="Afbeeldingen\Gerard.jpg" alt="Mijn veld" style="max-width: 100%;" style="height: auto;">
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Naar boven</button>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+
+    <div class="footer">
+        <p>Deze website is de GIP van Niels Tanghe, 6IB</p>
+    </div>
+</div>
+
+</body>
+
+</html>

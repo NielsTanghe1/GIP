@@ -1,0 +1,95 @@
+:root {
+    --select-color:rgba(255, 255, 255, 0.404);
+    --head-text-color: rgb(255, 255, 255);
+    --background-color:rgb(255, 255, 255);
+    --main-color:rgb(22, 133, 72);
+    --button-rounding: 0px;
+}
+
+
+
+/*Header*/
+h1, p, a{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+}
+
+h1 {
+  font-size: 3.5em;
+  padding: 10px 0;
+  font-weight: 800;
+}
+
+.header {
+  width: 100%;
+  padding:15px 0;
+  text-align: center;
+  color: var(--head-text-color);
+  background-color: var(--main-color);
+}
+
+.quote {
+  font-size: 1.1em;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+
+.flexbox-container {
+  display: flex;
+  flex-direction: column;  
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.top{
+  display: flex;
+  flex-direction: column;
+}
+
+/*Toolbar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgba(41, 18, 18, 0.781);
+    overflow: hidden;
+    position: static;
+    top: 0px;
+    backdrop-filter: blur(20px);
+
+  }
+  
+  li a {
+    display: block;
+    color: var(--select-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-bottom-left-radius: var(--button-rounding);
+    border-bottom-right-radius: var(--button-rounding);
+  }
+  li {
+    float: left;
+  }
+  
+  a {
+    display: block;
+    padding: 8px;
+  }
+
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: var(--select-color);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-bottom-left-radius: var(--button-rounding);
+    border-bottom-right-radius: var(--button-rounding);
+  }
+  .active {
+    background-color: var(--select-color);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-bottom-left-radius: var(--button-rounding);
+    border-bottom-right-radius: var(--button-rounding);  
+  }

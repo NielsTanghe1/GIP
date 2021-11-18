@@ -1,0 +1,21 @@
+:root {
+    --select-color:rgba(255, 255, 255, 0.404);
+    --head-text-color: rgb(255, 255, 255);
+    --background-color:rgb(255, 255, 255);
+    --main-color:rgb(22, 133, 72);
+    --button-rounding: 0px;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
