@@ -90,6 +90,7 @@
     transform: scale(0);
     transition: .15s ease;
     background-color: rgba(255, 255, 255, 0.863);
+    border: 0px;
   }
   
   /* When you mouse over the container, the overlay text will "zoom" in display */
