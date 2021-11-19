@@ -13,9 +13,18 @@
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
         <script type="text/javascript">
+          
+          var groente;
+
+          function reply_click(clicked_id){
+            groente = clicked_id;
+            console.log(groente)
+          }
+
           $(document).ready(function(){
               $("button").click(function(){
-                  $("#content").load("https://raw.githubusercontent.com/Perry01/GIP/main/bloemkool.html");
+                  $("#content").load("https://raw.githubusercontent.com/Perry01/GIP/main/Aanbod%20HTML/" + groente + ".html");
+
                   //$('#content').hide();
               });
           });
@@ -53,14 +62,14 @@
       <div id="gallery">
 
           
-          <div type="button" class="container" >
+          <div id='bloemkool' onClick="reply_click(this.id)" type="button" class="container" >
             <img src="Afbeeldingen\Aanbod groenten afbeeldingen/bloemkool.jfif" alt="Bloemkool" class="image">
             <button class="overlay">
               <div class="text">Bloemkool</div>
             </button>
           </div>
 
-          <div class="container">
+          <div id='Courgette' onClick="reply_click(this.id)" type="button" class="container">
             <img src="Afbeeldingen\Aanbod groenten afbeeldingen/courgette.jfif" alt="Courgette" class="image">
             <div class="overlay">
               <div class="text">Courgette</div>
