@@ -12,35 +12,11 @@
     
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-        <script type="text/javascript">
+        <script src="JS/clickscript.js" type="text/javascript"></script>
           
-          var groente;
-
-          function reply_click(clicked_id){
-            groente = clicked_id;
-            console.log(groente)
-            $("#content").load("https://raw.githubusercontent.com/Perry01/GIP/main/Aanbod%20HTML/" + groente + ".html");
-          }
-
-          /*$(document).ready(function(){
-              $("button").click(function(){
-                  $("#content").load("https://raw.githubusercontent.com/Perry01/GIP/main/Aanbod%20HTML/" + groente + ".html");
-
-                  //$('#content').hide();
-              });
-          });*/
-          </script>
 
         <!--Dit script zorgt voor de terugscrollknop-->
-        <script>
-        $(function(){
-            $('a').each(function(){
-                if ($(this).prop('href') == window.location.href) {
-                    $(this).addClass('active'); $(this).parents('li').addClass('active');
-                }
-            });
-        });
-    </script>
+        <script src="JS/scrollknop.js"></script>
 
 <body>
     
