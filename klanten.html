@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css\header.css" />
         <link rel="stylesheet" type="text/css" href="css\klantengallerij.css" />
         <link rel="stylesheet" type="text/css" href="css\scrollbutton.css" />
-
+        <link rel="stylesheet" type="text/css" href="css\login.css"/>
     
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="JS/scrollknop.js"></script>
@@ -25,12 +25,41 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="aanbod.html">Aanbod</a></li>
             <li><a href="klanten.html">Klanten</a></li>
-            <li style="float:right"><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li style="float:right"><button class="navbutton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
         </ul>  
 
-
-        <div class="gallerij">
-          <div id="customergallery">
+        
+        <div id="id01" class="modal">
+          <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+               <img src="Afbeeldingen/Avatar.PNG" alt="Avatar" class="avatar">
+             </div>
+        
+             <div class="logincontainer">
+                <label for="uname"><b>Gebruikersnaam</b></label>
+                <input type="text" placeholder="Vul hier je gebruikersnaam in..." name="uname" required>
+        
+                <label for="psw"><b>Wachtwoord</b></label>
+                <input type="password" placeholder="Vul hier je wachtwoord in..." name="psw" required>
+                
+                <button type="submit" class="loginbutton">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Onthouden
+                </label>
+             </div>
+        
+             <div class="container" style="background-color:#f1f1f1">
+               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuleer</button>
+               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="forgotbtn">Wachtwoord vergeten?</button>
+              </div>
+          </form>
+        </div>
+       
+          
+          <div class="gallerij">
+            <div id="customergallery">
 
             <div class="container">
               <img src="Afbeeldingen\Klanten Afbeeldingen\Colruyt.png" alt="Colruyt" class="image">
@@ -40,9 +69,9 @@
             </div>
 
             <div class="container">
-              <img src="Afbeeldingen\Klanten Afbeeldingen\albert_heijn.png" alt="Albert Heijn" class="image">
+              <img src="Afbeeldingen\Klanten Afbeeldingen\Carrefour.png" alt="Carrefour" class="image">
               <div class="overlay">
-                <div class="text">Albert Heijn</div>
+                <div class="text">Carrefour</div>
               </div>
             </div>
 
@@ -53,11 +82,11 @@
               </div>
             </div>
 
+            </div>
           </div>
         </div>
-
-
-
+    
+      
         <button onclick="topFunction()" id="myBtn" title="Go to top">Naar boven</button>
         <script>
           //Get the button
@@ -84,7 +113,7 @@
         <div class="footer">
             <p>Deze website is de GIP van Niels Tanghe, 6IB</p>
         </div>
-    </div>
+    
 
 </body>
 

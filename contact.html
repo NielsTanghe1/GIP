@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css\header.css" />
         <link rel="stylesheet" type="text/css" href="css\scrollbutton.css" />
         <link rel="stylesheet" type="text/css" href="css\login.css"/>
+        <link rel="stylesheet" type="text/css" href="css\contactform.css"/>
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="JS/scrollknop.js"></script>
@@ -63,18 +64,56 @@
       </form>
     </div>
 
-  <div class="flexbox-content">
-    <div  id="content" class=flexbox-paragraph>
-        <div class=titelp>
-            <h1>Welkom.</h1>
-    </div>
-        <div class=paragraph-text>
-            <p> Dag beste klant, welkom op mijn website, ik ben boer Gerard en ik hou van groentjes!<br>
-            Al meer dan 20 jaar sta ik zowel op het veld als op de markt, paraat om u de beste groenten aan te bieden.<br></p>
-            <img src="Afbeeldingen\Gerard.jpg" alt="Mijn veld" style="max-width: 100%;" style="height: auto;">
+    <div class="flexbox-content">
+
+        <div  id="content" class=flexbox-paragraph>
+          <div class=titelp>
+            <h1>Contacteer mij</h1>
+          </div>
+          <div class=paragraph-text>
+          <p> Als u graag contact met mij wilt opnemen kan dat via deze webpagina.<br>
+            Vul het formulier hiernaast in en duw op 'Submit'. Ik antwoord binnen de 2 werkdagen.<br>
+            Indien u dit verkiest kan u ook contact opnemen met mij door te bellen of mailen. <br>
+            U vind mijnt contactgegevens onderaan de pagina.<br></p>
+          <img src="Afbeeldingen\contact.png" alt="Contact" style="max-width: 100%;" style="height: auto;" style="margin-top: 20px;">
         </div>
-    </div>
-    </div>
+
+        <div  id="content" class=flexbox-paragraph style="margin-top: 60px;">
+          <div class=titelp>
+            <h2>Contactgegevens:</h2>
+            </div>
+          <div class=paragraph-text>
+            <p>
+              - Email:  Boeregerard@gmail.com<br>
+              - Tel:    +32 12 34 56<br>
+              - Adres:  Boerendreef 123 Boerenbeek<br>
+            </p>
+          </div>
+        </div>
+        </div>
+
+        <div class="contactcontainer">
+            <form action="PLACEHOLDER">
+              <label for="fname">Voornaam:</label>
+              <input type="text" id="voornaam" name="voornaam" placeholder="B.v. Gerard" required>
+          
+              <label for="lname">Achternaam:</label>
+              <input type="text" id="voornaam" name="achternaam" placeholder="B.v. Van Den Boere" required>
+          
+              <label for="Reden">Reden</label>
+              <select id="reden" name="reden" required>
+                <option value="klacht">Ik heb een klacht</option>
+                <option value="vraag">Ik heb een vraag</option>
+                <option value="andere">Andere</option>
+              </select>
+          
+              <label for="onderwerp">Onderwerp</label>
+              <textarea id="onderwerp" name="onderwerp" placeholder="Schijf hier je bericht" style="height:200px"></textarea>
+          
+              <input type="submit" value="Verzenden">
+            </form>
+         </div>
+
     </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Naar boven</button>

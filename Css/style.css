@@ -23,22 +23,25 @@ body{
 }
 
 .flexbox-paragraph{
-    display: flex;
+    display:flex;
     background-color: var(--background-color);
     flex-direction: column;
     text-align: left;
     width: auto;
-    
+    max-width: auto;
+    padding-right: 50px;
 }
 
 .titelp {
     color: rgb(0, 0, 0);
+    display:block;
+    width: auto;
 }
 
 .paragraph-text {
     color: black;
     font-size: 20px;
-    width: 50%;
+    width: auto;
     height: auto;
 }
 

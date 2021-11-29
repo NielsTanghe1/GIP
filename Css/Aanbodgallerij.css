@@ -75,6 +75,7 @@
   .image {
     width: 100%;
     height: auto;
+    cursor: pointer;
   }
   
   /* The overlay effect (full height and width) - lays on top of the container and over the image */
@@ -89,8 +90,12 @@
     height: auto;
     transform: scale(0);
     transition: .15s ease;
-    background-color: rgba(255, 255, 255, 0.863);
+    background-color: rgba(22, 133, 72, 0.753);
     border: 0px;
+    margin-bottom:5px;
+    margin-top: 0px;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
   }
   
   /* When you mouse over the container, the overlay text will "zoom" in display */
@@ -100,13 +105,15 @@
   
   /* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
   .text {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    font-family: system-ui;
+    font-weight: bold;
   }
 
   a{

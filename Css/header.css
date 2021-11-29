@@ -1,5 +1,5 @@
 :root {
-    --select-color:rgba(255, 255, 255, 0.404);
+    --select-color:rgb(255, 255, 255);
     --head-text-color: rgb(255, 255, 255);
     --background-color:rgb(255, 255, 255);
     --main-color:rgb(22, 133, 72);
@@ -11,8 +11,9 @@
 /*Header*/
 h1, p, a{
   margin: 0;
+  margin-bottom: 0px;
   padding: 0;
-  font-family: 'Lato';
+  font-family: system-ui;
 }
 
 h1 {
@@ -23,7 +24,7 @@ h1 {
 
 .header {
   width: 100%;
-  padding:15px 0;
+  padding: 15px 0;
   text-align: center;
   color: var(--head-text-color);
   background-color: var(--main-color);
@@ -42,54 +43,51 @@ h1 {
   background-repeat: no-repeat;
 }
 
-.top{
-  display: flex;
-  flex-direction: column;
-}
-
 /*Toolbar*/
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    width: 100%;
+    padding-left: 90px;
+    padding-right: 90px;
+    width: auto;
+    height: 50px;
     background-color: rgba(41, 18, 18, 0.781);
     overflow: hidden;
     position: static;
     top: 0px;
-    backdrop-filter: blur(20px);
-
   }
   
   li a {
-    display: block;
+    display: flex;
     color: var(--select-color);
     padding: 8px 16px;
     text-decoration: none;
-    border-bottom-left-radius: var(--button-rounding);
-    border-bottom-right-radius: var(--button-rounding);
+    height: 50px;
   }
+  
   li {
     float: left;
+    padding-left: 0px;
   }
   
   a {
     display: block;
     padding: 8px;
+    background-color: var(--main-color);
+    color:white;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 15px;
   }
 
   /* Change the link color on hover */
-  li a:hover {
-    background-color: var(--select-color);
+  a:hover {
+    background-color: rgb(81, 201, 135);
     color: rgb(255, 255, 255);
     font-weight: bold;
-    border-bottom-left-radius: var(--button-rounding);
-    border-bottom-right-radius: var(--button-rounding);
   }
-  .active {
-    background-color: var(--select-color);
+  a.active {
+    background-color: rgb(81, 201, 135);
     color: rgb(255, 255, 255);
-    font-weight: bold;
-    border-bottom-left-radius: var(--button-rounding);
-    border-bottom-right-radius: var(--button-rounding);  
+    font-weight: bold; 
   }
