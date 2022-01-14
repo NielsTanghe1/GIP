@@ -17,10 +17,18 @@ body{
     display: flex;
     flex-direction: row;
     align-content: flex-start;
-    padding-top: 3%;
-    padding-left: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     width: auto;
 }
+
+@media (max-width: 1000px) {
+    .flexbox-content {
+        flex-direction: column;
+    }
+  }
 
 .flexbox-paragraph{
     display:flex;
@@ -56,16 +64,3 @@ body{
     position: fixed;
     bottom: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/*LOGIN*/

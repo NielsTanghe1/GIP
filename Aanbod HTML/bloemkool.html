@@ -8,16 +8,17 @@
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-        $(function(){
-            $('a').each(function(){
-                if ($(this).prop('href') == window.location.href) {
-                    $(this).addClass('active'); $(this).parents('li').addClass('active');
-                }
+            $(function(){
+                $('a').each(function(){
+                    if ($(this).prop('href') == window.location.href) {
+                        $(this).addClass('active'); $(this).parents('li').addClass('active');
+                    }
+                });
             });
-        });
-    </script>
+        </script>
 
 <body>
+    <div id="content" >
     <div class=flexbox-container>
         <div class="flexbox-content">
         
@@ -32,10 +33,11 @@
             </div>
 
             <form>
-                <input type="button" value="Terug" onclick="history.go(-1)">
+                <input type="button" onClick="return_click" value="Terug">
             </form>
 
         </div>
+    </div>
     </div>
 </div>
 

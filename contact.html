@@ -30,11 +30,11 @@
     </section>
 
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aanbod.html">Aanbod</a></li>
-        <li><a href="klanten.html">Klanten</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li style="float:right"><button class="navbutton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+        <li><a class="navbuttons" href="index.html">Home</a></li>
+        <li><a class="navbuttons" href="aanbod.html">Aanbod</a></li>
+        <li><a class="navbuttons" href="klanten.html">Klanten</a></li>
+        <li><a class="navbuttons" href="contact.html">Contact</a></li>
+        <li class="float"><a class="navbuttons" style="margin-right: 0px;" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
     </ul>
 
     <div id="id01" class="modal">
@@ -72,10 +72,10 @@
           </div>
           <div class=paragraph-text>
           <p> Als u graag contact met mij wilt opnemen kan dat via deze webpagina.<br>
-            Vul het formulier hiernaast in en duw op 'Submit'. Ik antwoord binnen de 2 werkdagen.<br>
+            Vul het volgende formulier in en duw op 'Submit'. Ik antwoord binnen de 2 werkdagen.<br>
             Indien u dit verkiest kan u ook contact opnemen met mij door te bellen of mailen. <br>
             U vind mijnt contactgegevens onderaan de pagina.<br></p>
-          <img src="Afbeeldingen\contact.png" alt="Contact" style="max-width: 100%;" style="height: auto;" style="margin-top: 20px;">
+          
         </div>
 
         <div  id="content" class=flexbox-paragraph style="margin-top: 60px;">
@@ -86,7 +86,7 @@
             <p>
               - Email:  Boeregerard@gmail.com<br>
               - Tel:    +32 12 34 56<br>
-              - Adres:  Boerendreef 123 Boerenbeek<br>
+              - Adres:  <a class="link" href="https://www.google.be/maps/@51.0064502,2.9068301,495m/data=!3m1!1e3!5m1!1e4">Boerendreef 123 Boerenbeek</a><br>
             </p>
           </div>
         </div>
@@ -94,6 +94,8 @@
 
         <div class="contactcontainer">
             <form action="PLACEHOLDER">
+              <h2>Contactformulier:</h2>
+
               <label for="fname">Voornaam:</label>
               <input type="text" id="voornaam" name="voornaam" placeholder="B.v. Gerard" required>
           
