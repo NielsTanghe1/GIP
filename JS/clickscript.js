@@ -5,4 +5,7 @@
             groente = clicked_id;
             console.log(groente)
             $("#content").load("https://raw.githubusercontent.com/Perry01/GIP/main/Aanbod_HTML/product_page.php");
+
+            document.getElementById("Titel").innerHTML = "Koop hier je " + groente + ".";
+
           }

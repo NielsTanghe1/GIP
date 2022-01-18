@@ -8,6 +8,8 @@
         <link rel="stylesheet" type="text/css" href="/css/scrollbutton.css" />
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/JS/clickscript.js"></script>
+
         <script>
         $(function(){
             $('a').each(function(){
@@ -22,11 +24,7 @@
     <div class=flexbox-container>
         <div class="flexbox-content">
         
-            <?php
-
-            echo "<h3>Koop hier je groente.</h3>";
-
-            ?>
+            <p id=Titel></p>
             
 
         </div>
