@@ -28,8 +28,8 @@
     
         <ul>
           <li><a class="navbuttons" href="index.html">Home</a></li>
-          <li><a class="navbuttons" href="aanbod.html">Aanbod</a></li>
-          <li><a class="navbuttons" href="klanten.html">Klanten</a></li>
+          <li><a class="navbuttons" href="aanbod.php  ">Aanbod</a></li>
+          <li><a class="navbuttons" href="klanten.php">Klanten</a></li>
           <li><a class="navbuttons" href="contact.html">Contact</a></li>
           <li class="float"><a class="navbuttons" style="margin-right: 0px;" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
         </ul>
@@ -65,144 +65,43 @@
     <div id="content" class="gallerij">
       <div id="gallery">
  
-          <div id='bloemkool' onClick="reply_click(this.id)" type="button" class="container" >
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/bloemkool.jfif" alt="Bloemkool" class="image">
-              <div class="overlay">
-              <div class="text">Bloemkool</div>
-              </div>
-          </div>
+        <?php
 
-          <div id='Courgette' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/courgette.jfif" alt="Courgette" class="image">
-            <div class="overlay">
-              <div class="text">Courgette</div>
-            </div>
-          </div>
+          $servername = "localhost"; 
+          $username = "root"; 
+          $password = ""; 
+          $dbname = "gip"; 
+          
+          // Create connection 
+          $conn = mysqli_connect($servername, $username, $password, $dbname); 
+          // Check connection 
+          if (!$conn) { 
+              die("Connection failed: " . mysqli_connect_error()); 
+          } 
+        
+          $sql = "SELECT naam FROM groenten";
+          $result = $conn->query($sql);
 
-          <div id='Wortelen' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/wortelen.jfif" alt="Wortelen" class="image">
-            <div class="overlay">
-              <div class="text">Wortelen</div>
-            </div>
-          </div>
+          
 
-          <div id='Aardappelen' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/aardappel.jfif" alt="Aardappelen" class="image">
-            <div class="overlay">
-              <div class="text">Aardappelen</div>
-            </div>
-          </div>
-
-          <div id='Asperge' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/asperge.jfif"" alt="Asperges" class="image">
-            <div class="overlay">
-              <div class="text">Asperge</div>
-            </div>
-          </div>
-
-          <div id='Aubergine' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/aubergine.jfif" alt="Aubergine" class="image">
-            <div class="overlay">
-              <div class="text">Aubergine</div>
-            </div>
-          </div>
-
-          <div id='Rodekool' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/rodekool.jfif" alt="Rodekool" class="image">
-            <div class="overlay">
-              <div class="text">Rodekool</div>
-            </div>
-          </div>
-
-          <div id='Wittekool' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/wittekool.jfif" alt="Wittekool" class="image">
-            <div class="overlay">
-              <div class="text">Wittekool</div>
-            </div>
-          </div>
-
-          <div id='Spruiten' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/spruiten.jfif" alt="Spruiten" class="image">
-            <div class="overlay">
-              <div class="text">Spruiten</div>
-            </div>
-          </div>
-
-          <div id='Witloof' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/witloof.jfif" alt="Witloof" class="image">
-            <div class="overlay">
-            <div class="text">Witloof</div>
-           </div>
-          </div>
-
-          <div id='Bonen' onClick="reply_click(this.id)" type="button" class="container">
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/bonen.jfif" alt="Bonen" class="image">
-            <div class="overlay">
-            <div class="text">Bonen</div>
-          </div>
-          </div>
-
-          <div id='Broccoli' onClick="reply_click(this.id)" type="button" class="container">       
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/broccoli.jfif" alt="Broccoli" class="image">
-            <div class="overlay">
-            <div class="text">Broccoli</div>
-           </div>
-          </div>   
-           
-        <div id='Prei' onClick="reply_click(this.id)" type="button" class="container">        
-            <img src="Afbeeldingen\Aanbod groenten afbeeldingen/prei.jfif" alt="Prei" class="image">
-            <div class="overlay">
-            <div class="text">Prei</div>
-           </div>
-         </div> 
-             
-        <div id='Tomaten' onClick="reply_click(this.id)" type="button" class="container">     
-           <img src="Afbeeldingen\Aanbod groenten afbeeldingen/tomaten.jfif" alt="Tomaten" class="image">
-            <div class="overlay">
-           <div class="text">Tomaten</div>
-            </div>
-        </div> 
-            
-        <div id='Pompoen' onClick="reply_click(this.id)" type="button" class="container">     
-           <img src="Afbeeldingen\Aanbod groenten afbeeldingen/pompoen.jfif" alt="Pompoen" class="image">
-            <div class="overlay">
-           <div class="text">Pompoen</div>
-           </div>
-        </div> 
-
-        <div id='Venkel' onClick="reply_click(this.id)" type="button" class="container">     
-          <img src="Afbeeldingen\Aanbod groenten afbeeldingen/venkel.jfif" alt="Venkel" class="image">
-           <div class="overlay">
-          <div class="text">Venkel</div>
-          </div>
-        </div> 
-
-        <div id='Radijs' onClick="reply_click(this.id)" type="button" class="container">     
-          <img src="Afbeeldingen\Aanbod groenten afbeeldingen/radijs.png" alt="Radijs" class="image">
-          <div class="overlay">
-          <div class="text">Radijs</div>
-          </div>
-        </div> 
-
-      <div id='Rodeui' onClick="reply_click(this.id)" type="button" class="container">     
-        <img src="Afbeeldingen\Aanbod groenten afbeeldingen/rodeui.jpg" alt="Rode Ui" class="image">
-         <div class="overlay">
-        <div class="text">Rodeui</div>
-        </div>
-      </div> 
-      <div id='Ajuin' onClick="reply_click(this.id)" type="button" class="container">     
-        <img src="Afbeeldingen\Aanbod groenten afbeeldingen/ajuin.jpg" alt="Ajuin" class="image">
-         <div class="overlay">
-        <div class="text">Ajuin</div>
-        </div>
-      </div> 
-
-      <div id='Champignon' onClick="reply_click(this.id)" type="button" class="container">     
-        <img src="Afbeeldingen\Aanbod groenten afbeeldingen/Champignon.jpg" alt="Champignon" class="image">
-         <div class="overlay">
-        <div class="text">Champignon</div>
-        </div>
-      </div> 
+          if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+              echo <<<EOD
+              <div id='$row[naam]' onClick="reply_click(this.id)" type="button" class="container" >
+               <img src="Afbeeldingen\Aanbod groenten afbeeldingen/$row[naam].jfif" alt="$row[naam]" class="image">
+               <div class="overlay">
+               <div class="text">$row[naam]</div>
+               </div>
+               </div>
+              EOD;
+            }
+          } 
+          else {
+            echo "Foutmelding";
+          }
+          $conn->close();
+        ?>
     </div>
   </div>
 

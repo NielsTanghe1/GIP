@@ -22,7 +22,12 @@
     <div class=flexbox-container>
         <div class="flexbox-content">
         
-            <h3>Koop hier je courgette.</h3>
+            <?php
+
+            echo "<h3>Koop hier je groente.</h3>";
+
+            ?>
+            
 
         </div>
     </div>

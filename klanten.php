@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 
 
@@ -24,7 +24,7 @@
         <ul>
           <li><a class="navbuttons" href="index.html">Home</a></li>
           <li><a class="navbuttons" href="aanbod.php">Aanbod</a></li>
-          <li><a class="navbuttons" href="klanten.html">Klanten</a></li>
+          <li><a class="navbuttons" href="klanten.php">Klanten</a></li>
           <li><a class="navbuttons" href="contact.html">Contact</a></li>
           <li class="float"><a class="navbuttons" style="margin-right: 0px;" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
         </ul>  
@@ -60,27 +60,41 @@
           
           <div class="gallerij">
             <div id="customergallery">
+            <?php
 
-            <div class="container">
-              <img src="Afbeeldingen\Klanten Afbeeldingen\Colruyt.png" alt="Colruyt" class="image">
-              <div class="overlay">
-                <div class="text">Colruyt</div>
-              </div>
-            </div>
+              $servername = "localhost"; 
+              $username = "root"; 
+              $password = ""; 
+              $dbname = "gip"; 
+              
+              // Create connection 
+              $conn = mysqli_connect($servername, $username, $password, $dbname); 
+              // Check connection 
+              if (!$conn) { 
+                  die("Connection failed: " . mysqli_connect_error()); 
+              } 
+            
+              $sql = "SELECT naam FROM klanten";
+              $result = $conn->query($sql);
 
-            <div class="container">
-              <img src="Afbeeldingen\Klanten Afbeeldingen\Carrefour.png" alt="Carrefour" class="image">
-              <div class="overlay">
-                <div class="text">Carrefour</div>
-              </div>
-            </div>
-
-            <div class="container">
-              <img src="Afbeeldingen\Klanten Afbeeldingen\Delhaize.png" alt="Delhaize" class="image">
-              <div class="overlay">
-                <div class="text">Delhaize</div>
-              </div>
-            </div>
+              if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                  echo <<<EOD
+                  <div class="container">
+                  <img src="Afbeeldingen/Klanten Afbeeldingen/$row[naam].png" alt="$row[naam]" class="image">
+                  <div class="overlay">
+                  <div class="text">$row[naam]</div>
+                  </div>
+                  </div>
+                  EOD;
+                }
+              } 
+              else {
+                echo "Foutmelding";
+              }
+              $conn->close();
+            ?>
 
             </div>
           </div>
