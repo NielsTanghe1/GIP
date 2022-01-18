@@ -3,11 +3,10 @@
 <html>
     <head>
         <title>Groenten Gerard</title>
-        <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Perry01/GIP/main/Css/style.css" />
-        <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Perry01/GIP/main/Css/scrollbutton.css" />
+        <link rel="stylesheet" type="text/css" href="/Css/style.css" />
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://raw.githubusercontent.com/Perry01/GIP/main/JS/clickscript.js"></script>
+        <script type="application/javascript" src="https://raw.githubusercontent.com/Perry01/GIP/main/JS/clickscript.js"></script>
 
         <script>
         $(function(){
