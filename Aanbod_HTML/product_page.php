@@ -3,9 +3,9 @@
 <html>
     <head>
         <title>Groenten Gerard</title>
-        <link rel="stylesheet" type="text/css" href="css\style.css" />
-        <link rel="stylesheet" type="text/css" href="css\header.css" />
-        <link rel="stylesheet" type="text/css" href="css\scrollbutton.css" />
+        <link rel="stylesheet" type="text/css" href="..\css\style.css" />
+        <link rel="stylesheet" type="text/css" href="..\css\header.css" />
+        <link rel="stylesheet" type="text/css" href="..\css\scrollbutton.css" />
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
