@@ -3,9 +3,8 @@
 <html>
     <head>
         <title>Groenten Gerard</title>
-        <link rel="stylesheet" type="text/css" href="/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="/css/header.css" />
-        <link rel="stylesheet" type="text/css" href="/css/scrollbutton.css" />
+        <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Perry01/GIP/main/Css/style.css" />
+        <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Perry01/GIP/main/Css/scrollbutton.css" />
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="/JS/clickscript.js"></script>
@@ -24,7 +23,7 @@
     <div class=flexbox-container>
         <div class="flexbox-content">
         
-            <p id=Titel></p>
+            <p id=Titel> TEST </p>
             
 
         </div>
