@@ -12,7 +12,6 @@
     
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="JS\clickscript.js"></script>
-        <script src="https://raw.githubusercontent.com/Perry01/GIP/main/JS/returnbtn.js"></script>
 
         <!--Dit script zorgt voor de terugscrollknop-->
         <script src="JS/scrollknop.js"></script>
