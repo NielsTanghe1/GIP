@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<html>
 
-    
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: loginsysteem/login.php");
+    exit;
+}
+?>
+
+<html>
 
     <head>
         <title>Groenten Gerard</title>
@@ -33,7 +43,7 @@
       <li><a class="navbuttons" href="aanbod.php">Aanbod</a></li>
       <li><a class="navbuttons" href="klanten.php">Klanten</a></li>
       <li><a class="navbuttons" href="contact.html">Contact</a></li>
-      <li class="float"><a class="navbuttons" style="margin-right: 0px;" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
+      <li><a class="navbuttons" href="loginsysteem/logout.php">Uitloggen</a></li>
     </ul>
 
     <div id="id01" class="modal">
@@ -50,15 +60,15 @@
             <label for="psw"><b>Wachtwoord</b></label>
             <input type="password" placeholder="Vul hier je wachtwoord in..." name="psw" required>
             
-            <button type="submit" class="loginbutton">Login</button>
+            <button type="submit" class="loginbutton"><b>Login</b></button>
             <label>
               <input type="checkbox" checked="checked" name="remember"> Onthouden
             </label>
          </div>
     
          <div class="container" style="background-color:#f1f1f1">
-           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuleer</button>
-           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="forgotbtn">Wachtwoord vergeten?</button>
+           <button type="button" class="forgotbtn "><b>Sign Up</b></button>
+           <button type="button" class="forgotbtn">Wachtwoord vergeten?</button>
           </div>
       </form>
     </div>

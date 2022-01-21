@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: loginsysteem/login.php");
+    exit;
+}
+?>
+
+<html>
+
+    <head>
+        <title>Groenten Gerard</title>
+        <link rel="stylesheet" type="text/css" href="css\style.css" />
+        <link rel="stylesheet" type="text/css" href="css\header.css" />
+        <link rel="stylesheet" type="text/css" href="css\scrollbutton.css" />
+        <link rel="stylesheet" type="text/css" href="css\login.css"/>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="JS/scrollknop.js"></script>
+        <script src="JS/Loginmenu.js"></script>
+
+
+<body>
+
+<div class=flexbox-container>
+
+    <section class="header">
+       
+        
+        <h1>Groentenboer Gerard</h1>
+        <p class=quote>"Recht uit de grond, een plezier voor uw mond"</p>
+        
+        
+    </section>
+
+    <ul>
+      <li><a class="navbuttons" href="index.html">Home</a></li>
+      <li><a class="navbuttons" href="aanbod.php">Aanbod</a></li>
+      <li><a class="navbuttons" href="klanten.php">Klanten</a></li>
+      <li><a class="navbuttons" href="contact.html">Contact</a></li>
+      <li><a class="navbuttons" href="loginsysteem/logout.php">Uitloggen</a></li>
+    </ul>
+
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+           <img src="Afbeeldingen/Avatar.PNG" alt="Avatar" class="avatar">
+         </div>
+    
+         <div class="logincontainer">
+            <label for="uname"><b>Gebruikersnaam</b></label>
+            <input type="text" placeholder="Vul hier je gebruikersnaam in..." name="uname" required>
+    
+            <label for="psw"><b>Wachtwoord</b></label>
+            <input type="password" placeholder="Vul hier je wachtwoord in..." name="psw" required>
+            
+            <button type="submit" class="loginbutton"><b>Login</b></button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Onthouden
+            </label>
+         </div>
+    
+         <div class="container" style="background-color:#f1f1f1">
+           <button type="button" class="forgotbtn "><b>Sign Up</b></button>
+           <button type="button" class="forgotbtn">Wachtwoord vergeten?</button>
+          </div>
+      </form>
+    </div>
+
+  <div class="flexbox-content">
+    <div  id="content" class=flexbox-paragraph>
+        <div class=titelp>
+            <h1>Welkom.</h1>
+    </div>
+        <div class=paragraph-text>
+            <p> Dag beste klant, welkom op mijn website, ik ben boer Gerard en ik hou van groentjes!<br>
+            Al meer dan 20 jaar sta ik zowel op het veld als op de markt, paraat om u de beste groenten aan te bieden.<br></p>
+            <img src="Afbeeldingen\Gerard.jpg" alt="Mijn veld" style="max-width: 100%;" style="height: auto;">
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Naar boven</button>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+
+    <div class="footer">
+        <p>Deze website is de GIP van Niels Tanghe, 6IB</p>
+  </div>
+</div>
+
+</body>
+
+</html>

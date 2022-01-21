@@ -1,0 +1,121 @@
+:root {
+    --select-color:rgba(255, 255, 255, 0.404);
+    --head-text-color: rgb(255, 255, 255);
+    --background-color:rgb(255, 255, 255);
+    --main-color:rgb(22, 133, 72);
+    --button-rounding: 0px;
+}
+
+/*Afbeeldingen Gallerij van Aanbod*/
+.gallerij{
+    display: flex;
+    width: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  #gallery {
+    line-height:0;
+    -webkit-column-count:5; /* split it into 5 columns */
+    -webkit-column-gap:5px; /* give it a 5px gap between columns */
+    -moz-column-count:5;
+    -moz-column-gap:5px;
+    column-count:5;
+    column-gap:5px;
+  }
+
+ #gallery img {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom:5px; /* to match column gap */
+}
+
+@media (max-width: 1200px) {
+  #gallery {
+   -moz-column-count:    4;
+   -webkit-column-count: 4;
+   column-count:         4;
+  }
+}
+
+@media (max-width: 1000px) {
+  #gallery {
+   -moz-column-count:    2;
+   -webkit-column-count: 2;
+   column-count:         2;
+  }
+}
+
+@media (max-width: 800px) {
+  #gallery {
+   -moz-column-count:    2;
+   -webkit-column-count: 2;
+   column-count:         2;
+  }
+}
+
+@media (max-width: 400px) {
+  #gallery {
+   -moz-column-count:    1;
+   -webkit-column-count: 1;
+   column-count:         1;
+  }
+}
+
+/*toont extra informatie overn aanbod tijdens hover*/
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Make the image responsive */
+  .image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  /* The overlay effect (full height and width) - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    transform: scale(0);
+    transition: .15s ease;
+    background-color: rgba(22, 133, 72, 0.753);
+    border: 0px;
+    margin-bottom:5px;
+    margin-top: 0px;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+  }
+  
+  /* When you mouse over the container, the overlay text will "zoom" in display */
+  .container:hover .overlay {
+    transform: scale(1);
+  }
+  
+  /* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+  .text {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: system-ui;
+    font-weight: bold;
+  }
+
+  a{
+    padding: 0px;
+  }
