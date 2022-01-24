@@ -97,10 +97,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 </head>
 <body >
-    <div class="logincontainer" style="width: 50%;">
+    <div class="logincontainer">
 
-        <h2>Log in of registreer om verder te gaan naar de website van boer Gerard...</h2>
-
+        
         <?php 
         if(!empty($login_err)){
             echo '<div class="alert alert-danger">' . $login_err . '</div>';
