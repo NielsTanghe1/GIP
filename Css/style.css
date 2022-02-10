@@ -15,7 +15,7 @@ body{
 
 .flexbox-content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: flex-start;
     padding-left: 10%;
     padding-right: 10%;
