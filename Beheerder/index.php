@@ -15,10 +15,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     <head>
         <title>Welkom - Groenten Gerard</title>
-        <link rel="stylesheet" type="text/css" href="css\style.css" />
-        <link rel="stylesheet" type="text/css" href="css\header.css" />
-        <link rel="stylesheet" type="text/css" href="css\scrollbutton.css" />
-        <link rel="stylesheet" type="text/css" href="css\login.css"/>
+        <link rel="stylesheet" type="text/css" href="/gip/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="/gip/css/header.css" />
+        <link rel="stylesheet" type="text/css" href="/gip/css/scrollbutton.css" />
+        <link rel="stylesheet" type="text/css" href="/gip/css/login.css"/>
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="JS/scrollknop.js"></script>
@@ -39,18 +39,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </section>
 
     <ul>
-      <li><a class="navbuttons" href="index.php">Home</a></li>
-      <li><a class="navbuttons" href="aanbod.php">Aanbod</a></li>
-      <li><a class="navbuttons" href="klanten.php">Klanten</a></li>
-      <li><a class="navbuttons" href="contact.html">Contact</a></li>
-      <li><a class="navbuttons" href="loginsysteem/logout.php">Uitloggen</a></li>
+      <li><a class="navbuttons" href="Stock.php">Stock</a></li>
+      <li><a class="navbuttons" href="Bestellingen.php">Bestellingen</a></li>
     </ul>
 
   <div class="flexbox-content">
-
+    
   </div>
-  
-</div>
+  </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Naar boven</button>
     <script>

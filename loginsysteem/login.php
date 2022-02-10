@@ -20,14 +20,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
+        $username_err = "Gelieve je gebruikersnaam in te vullen.<br><br>";
     } else{
         $username = trim($_POST["username"]);
     }
     
     // Check if password is empty
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter your password.";
+        $password_err = "Gelieve je wachtwoord in te vullen.<br><br>";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -94,12 +94,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="/gip/css/login.css">
+    <link rel="stylesheet" href="/gip/css/header.css">
 
 </head>
-<body >
-    <div class="logincontainer">
-
-        
+<body>
+    <div>
+    
+    <div class="logincontainer" style="transform: translateY(30%); flex-direction: column;">
+        <h1>Groenten Gerard.</h1><br>
+        <p style="font-size: 1.1em; font-weight: heavy; letter-spacing: 1px;">Log u in of meld u aan om verder te gaan...</p><br><br><br>
         <?php 
         if(!empty($login_err)){
             echo '<div class="alert alert-danger">' . $login_err . '</div>';
@@ -122,6 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Nog geen account? <a href="register.php">Registreer nu</a>.</p>
         </form>
+    </div>
     </div>
 </body>
 </html>

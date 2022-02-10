@@ -3,7 +3,7 @@
 
 
     <head>
-        <title>Groenten Gerard</title>
+        <title>Aanbod - Groenten Gerard</title>
         <link rel="stylesheet" type="text/css" href="css\style.css" />
         <link rel="stylesheet" type="text/css" href="css\header.css" />
         <link rel="stylesheet" type="text/css" href="css\aanbodgallerij.css" />
@@ -34,33 +34,6 @@
         </ul>
       </div>
 
-      <div id="id01" class="modal">
-        <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-             <img src="Afbeeldingen/Avatar.PNG" alt="Avatar" class="avatar">
-           </div>
-      
-           <div class="logincontainer">
-              <label for="uname"><b>Gebruikersnaam</b></label>
-              <input type="text" placeholder="Vul hier je gebruikersnaam in..." name="uname" required>
-      
-              <label for="psw"><b>Wachtwoord</b></label>
-              <input type="password" placeholder="Vul hier je wachtwoord in..." name="psw" required>
-              
-              <button type="submit" class="loginbutton">Login</button>
-              <label>
-                <input type="checkbox" checked="checked" name="remember"> Onthouden
-              </label>
-           </div>
-      
-           <div class="container" style="background-color:#f1f1f1">
-             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuleer</button>
-             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="forgotbtn">Wachtwoord vergeten?</button>
-            </div>
-        </form>
-      </div>
-
     <div id="content" class="gallerij">
       <div id="gallery">
  
@@ -81,10 +54,8 @@
           $sql = "SELECT naam FROM groenten";
           $result = $conn->query($sql);
 
-          
-
           if ($result->num_rows > 0) {
-            // output data of each row
+            // output data of each r  ow
             while($row = $result->fetch_assoc()) {
               echo <<<EOD
               <div id='$row[naam]' onClick="reply_click(this.id)" type="button" class="container" >
