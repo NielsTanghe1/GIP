@@ -8,28 +8,26 @@
     <link rel="stylesheet" type="text/css" href="../../css/scrollbutton.css" />
     <link rel="stylesheet" type="text/css" href="../../css/login.css"/>
     <link rel="stylesheet" type="text/css" href="../../Css/stocktabel.css" />
-
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../../JS/scrollknop.js"></script>
+    <script src="../JS/scrollknop.js"></script>
     <script src="../scripts/sorteren_az.js"></script>
 
-    
     <!--Header-->
     <?php include('../html_elements/header.html'); ?>
   </head>
-    
+      
   <body>
     <div class=flexbox-container>
       <div class="flexbox-content">
-        <h1>Berichten</h1>
-          <?php
+        <h1>Klanten</h1>
+        <?php
             /* connect to the db */
             require("D:/xampp/htdocs/GIP/sqlconfig/config.php");
 
             /* show tables */
-              $sql = "SELECT * FROM berichten";
-              $result = mysqli_query($con, $sql) or die('error');
+              $sql = "SELECT * FROM klanten";
+                $result = mysqli_query($con, $sql) or die('error');
 
               echo '<table id="tabel" class="stock">';
 
@@ -53,9 +51,9 @@
               echo "</table>";
           ?>
         </div>
-    </div>
+      </div>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Naar boven</button>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Naar boven</button>
       <script>
         //Get the button
         var mybutton = document.getElementById("myBtn");

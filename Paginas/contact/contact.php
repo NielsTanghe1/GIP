@@ -3,18 +3,17 @@
 
   <head>
     <title>Contact - Groenten Gerard</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/header.css" />
-    <link rel="stylesheet" type="text/css" href="../css/scrollbutton.css" />
-    <link rel="stylesheet" type="text/css" href="../css/login.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/contactform.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/header.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/scrollbutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/contactform.css"/>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="JS/scrollknop.js"></script>
-    <script src="JS/Loginmenu.js"></script>
+    <script src="../../JS/scrollknop.js"></script>
 
     <!--Header-->
-    <?php include('../html_elements/header.html'); ?>
+    <?php include('../../html_elements/header.html'); ?>
   </head>
 
   <body>
@@ -46,8 +45,7 @@
             </div>
           </div>
         </div>
-
-          <div class="contactcontainer">
+        <div class="contactcontainer">
               <form action="bericht.php" method="POST">
                 <h2>Contactformulier:</h2>
 
@@ -66,7 +64,7 @@
           </div>
       </div>
       <!--Footer-->
-      <?php include('../html_elements/footer.html'); ?>
+      <?php include('../../html_elements/footer.html'); ?>
     </div>
 
 </body>

@@ -1,8 +1,8 @@
-<link rel="stylesheet" type="text/css" href="../Css/bericht.css" />
+<link rel="stylesheet" type="text/css" href="../../Css/bericht.css" />
 
 
 <?php
-    require('../sqlconfig/config.php');
+    require('../../sqlconfig/config.php');
     session_start();
   
 
@@ -23,7 +23,7 @@
 
             <div class="center">
             <h2>Bericht is succesvol verzonden!</h2>
-            <button  type="button" class="button"  onclick="window.location.href='../index.php'">Terug naar website</button>
+            <button  type="button" class="button"  onclick="window.location.href='../../index.php'">Terug naar website</button>
             </div>
 
             <?php

@@ -1,6 +1,6 @@
 <?php
 
-    require("D:/xampp/htdocs/GIP/sqlconfig/config.php");
+    require("../sqlconfig/config.php");
 
     $hoeveelheidww = array();
     $groentenww = array();

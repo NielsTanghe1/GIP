@@ -25,19 +25,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <script src="JS/scrollknop.js"></script>
         <script src="JS/Loginmenu.js"></script>
 
-        <section class="header">
-          <h1>Groentenboer Gerard</h1>
-          <p class=quote>"Recht uit de grond, een plezier voor uw mond"</p>
-        </section>
-
-        <ul>
-          <li><a class="navbuttons" href="index.php">Home</a></li>
-          <li><a class="navbuttons" href="bestellingen.php">Bestellingen</a></li>
-          <li><a class="navbuttons" href="berichten.php">Berichten</a></li>
-          <li><a class="navbuttons" href="stock.php">Stock</a></li>
-          <li><a class="navbuttons" href="gebruikers.php">Gebruikers</a></li>
-          <li><a class="navbuttons" href="../loginsysteem/logout.php">Uitloggen</a></li>
-        </ul>
+        <!--Header-->
+        <?php include('html_elements/header.html'); ?>
     <head>
 
 <body>
