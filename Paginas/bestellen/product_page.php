@@ -14,32 +14,16 @@
             
         <form class="bestelling" action="winkelwagen.php" method="post">
             <?php
-
-               require("D:/xampp/htdocs/GIP/sqlconfig/config.php");
-
+                require("D:/xampp/htdocs/GIP/sqlconfig/config.php");
                 $sql="SELECT * FROM groenten";  // Query to collect records
                 $result = $con->query($sql);
-
             ?>
 
-            <?php echo $_GET['groente'];?>
-            
-            <?php
-                if ($result->num_rows > 0) {
+            <?php echo $_GET['groente'].", Prijs per kilo: ".$_GET['prijsperkilo'];?><br>
+            <label>Hoeveelheid (KG):</label>
+            <input type="number" id="hoeveelheid" name="hoeveelheid">
 
-                    foreach ($result as $row) {
-                        echo  "<option value='$row[naam]'>"; // Voegt optie toe per item in db
-                    }
-                } 
-                else {
-                    echo "Foutmelding";
-                }
-
-                echo "</datalist><br><br>";
-              $con->close();
-            ?>
-
-            <input type="submit" id="submit" value="Voeg toe aan winkelwagen">
+            <input type="submit" id="submit" value="Volgende">
 
         </form>
 
